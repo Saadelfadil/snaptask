@@ -1,0 +1,11 @@
+# robots.txt — SnapTask
+# https://saadelfadil.github.io/snaptask/
+
+User-agent: *
+Allow: /
+
+# Point crawlers to the sitemap
+Sitemap: https://saadelfadil.github.io/snaptask/sitemap.xml
+
+# Disallow raw asset directories if any exist
+Disallow: /assets/screenshots/

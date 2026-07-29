@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4F46E5" />
+  <meta name="robots" content="noindex, follow" />
+
+  <title>Page Not Found — SnapTask</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Head back to SnapTask." />
+
+  <link rel="icon"             type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon"                  href="assets/favicon.png" />
+  <link rel="manifest"                          href="manifest.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+
+  <!-- Skip navigation -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Navigation (shared) ── -->
+  <header class="site-header" id="site-header" role="banner">
+    <nav class="nav container" aria-label="Main navigation">
+
+      <a href="index.html" class="nav__logo" aria-label="SnapTask home">
+        <img src="assets/logo.svg" alt="SnapTask" width="120" height="32" />
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="index.html#features"     class="nav__link">Features</a></li>
+        <li><a href="index.html#how-it-works" class="nav__link">How It Works</a></li>
+        <li><a href="privacy.html"            class="nav__link">Privacy</a></li>
+        <li><a href="index.html#faq"          class="nav__link">FAQ</a></li>
+        <li><a href="support.html"            class="nav__link">Support</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <a href="index.html#download" class="btn btn--primary btn--sm">Download</a>
+      </div>
+
+      <button
+        class="nav__burger"
+        id="nav-burger"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="nav__burger-bar"></span>
+        <span class="nav__burger-bar"></span>
+        <span class="nav__burger-bar"></span>
+      </button>
+
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation" hidden>
+      <ul class="mobile-menu__links" role="list">
+        <li><a href="index.html#features"     class="mobile-menu__link">Features</a></li>
+        <li><a href="index.html#how-it-works" class="mobile-menu__link">How It Works</a></li>
+        <li><a href="privacy.html"            class="mobile-menu__link">Privacy</a></li>
+        <li><a href="index.html#faq"          class="mobile-menu__link">FAQ</a></li>
+        <li><a href="support.html"            class="mobile-menu__link">Support</a></li>
+        <li><a href="index.html#download"     class="mobile-menu__link mobile-menu__link--cta">Download</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <!-- ── 404 Content ── -->
+  <main id="main-content">
+    <div class="page-404">
+
+      <div class="page-404__code" aria-hidden="true">404</div>
+
+      <h1 class="page-404__title">Page not found</h1>
+
+      <p class="page-404__desc">
+        The page you're looking for has moved, been removed, or never existed.
+        Let's get you back on track.
+      </p>
+
+      <div class="page-404__actions">
+        <a href="index.html" class="btn btn--primary btn--lg">
+          <svg class="btn__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+          Back to Home
+        </a>
+        <a href="support.html" class="btn btn--ghost btn--lg">
+          Contact Support
+          <svg class="btn__icon btn__icon--right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+
+  <!-- ── Footer (shared) ── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer__layout">
+
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo" aria-label="SnapTask home">
+            <img src="assets/logo.svg" alt="SnapTask" width="110" height="28" loading="lazy" />
+          </a>
+          <p class="footer__tagline">Turn screenshots into real actions.</p>
+          <p class="footer__meta">Version 1.0.0 · Android</p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Footer navigation">
+
+          <div class="footer__nav-group">
+            <h3 class="footer__nav-heading">Product</h3>
+            <ul class="footer__nav-list" role="list">
+              <li><a href="index.html#features"     class="footer__nav-link">Features</a></li>
+              <li><a href="index.html#how-it-works" class="footer__nav-link">How It Works</a></li>
+              <li><a href="index.html#faq"          class="footer__nav-link">FAQ</a></li>
+              <li><a href="index.html#download"     class="footer__nav-link">Download</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__nav-group">
+            <h3 class="footer__nav-heading">Legal</h3>
+            <ul class="footer__nav-list" role="list">
+              <li><a href="privacy.html" class="footer__nav-link">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__nav-group">
+            <h3 class="footer__nav-heading">Support</h3>
+            <ul class="footer__nav-list" role="list">
+              <li><a href="support.html" class="footer__nav-link">Help Center</a></li>
+              <li>
+                <a href="mailto:saadelfadil18@gmail.com" class="footer__nav-link">
+                  saadelfadil18@gmail.com
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </nav>
+
+      </div><!-- /footer__layout -->
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          &copy; 2026 SnapTask. Developed by
+          <a href="mailto:saadelfadil18@gmail.com" class="footer__nav-link">Saad El Fadil</a>.
+        </p>
+        <p class="footer__legal-note">
+          <a href="privacy.html" class="footer__nav-link">Privacy Policy</a>.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>

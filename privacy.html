@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SnapTask version 1.0 Privacy Policy — Your screenshots are processed on your device using on-device ML Kit OCR and are not transmitted to any server." />
+  <meta name="robots" content="index, follow" />
+  <title>Privacy Policy — SnapTask</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon"                  href="assets/favicon.png" />
+  <meta property="og:title" content="Privacy Policy — SnapTask" />
+  <meta property="og:description" content="SnapTask version 1.0 Privacy Policy — on-device processing, no data transmitted." />
+  <meta property="og:image" content="assets/hero-image.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="assets/hero-image.png" />
+  <!-- ── Canonical & SEO ──────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://saadelfadil.github.io/snaptask/privacy.html" />
+  <meta name="author" content="Saad El Fadil" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"      content="website" />
+  <meta property="og:url"       content="https://saadelfadil.github.io/snaptask/privacy.html" />
+  <meta property="og:site_name" content="SnapTask" />
+  <meta property="og:locale"    content="en_US" />
+
+  <!-- ── Twitter Card ──────────────────────────────────────────────────── -->
+
+  <!-- ── Theme & PWA ───────────────────────────────────────────────────── -->
+  <meta name="theme-color"                         content="#4F46E5" />
+  <link rel="manifest"                             href="manifest.webmanifest" />
+  <meta name="apple-mobile-web-app-capable"        content="yes" />
+  <meta name="apple-mobile-web-app-title"          content="SnapTask" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+  <!-- ── Shared design system (nav, footer, skip-link, buttons) ─────────── -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ── Privacy-page-specific styles ──────────────────────────────────── -->
+  <style>
+    /* ── Design tokens ──────────────────────────────────────────────────── */
+    :root {
+      --primary:        #4F46E5;
+      --primary-dark:   #3730A3;
+      --primary-med:    #4338CA;
+      --primary-light:  #818CF8;
+      --primary-pale:   #EEF2FF;
+      --secondary:      #22D3EE;
+      --secondary-dark: #0891B2;
+      --secondary-pale: #ECFEFF;
+      --green:          #22C55E;
+      --green-pale:     #F0FDF4;
+      --green-border:   #BBF7D0;
+      --green-text:     #166534;
+      --amber:          #F59E0B;
+      --amber-pale:     #FFFBEB;
+      --amber-text:     #92400E;
+      --ink:            #111827;
+      --ink-2:          #374151;
+      --ink-3:          #6B7280;
+      --ink-4:          #9CA3AF;
+      --surface:        #FFFFFF;
+      --surface-2:      #F9FAFB;
+      --surface-3:      #F3F4F6;
+      --border:         #E5E7EB;
+      --border-2:       #D1D5DB;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.10), 0 1px 2px rgba(0,0,0,.06);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,.10), 0 2px 4px -1px rgba(0,0,0,.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,.10), 0 4px 6px -2px rgba(0,0,0,.05);
+      --r-sm:  8px;
+      --r:    12px;
+      --r-lg: 16px;
+      --r-xl: 20px;
+      --font: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    /* ── Privacy page base overrides ──────────────────────────────────────── */
+    body { line-height: 1.7; }
+
+    /* ── Typography ─────────────────────────────────────────────────────── */
+    h1, h2, h3, h4 { font-weight: 700; line-height: 1.25; }
+    h1  { font-size: clamp(2rem, 5vw, 3rem); }
+    h2  { font-size: clamp(1.2rem, 3vw, 1.5rem); color: var(--ink); }
+    h3  { font-size: 1.0625rem; color: var(--ink); margin-top: 1.5rem; margin-bottom: 0.5rem; }
+    h3:first-child { margin-top: 0; }
+    p   { color: var(--ink-2); margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+    a   { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul, ol { padding-left: 1.5rem; color: var(--ink-2); margin-bottom: 1rem; }
+    ul:last-child, ol:last-child { margin-bottom: 0; }
+    li  { margin-bottom: 0.45rem; }
+    li:last-child { margin-bottom: 0; }
+    strong { font-weight: 600; color: var(--ink); }
+    code {
+      font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+      font-size: 0.85em;
+      background: var(--primary-pale);
+      color: var(--primary);
+      padding: 0.15em 0.45em;
+      border-radius: 4px;
+    }
+
+    /* ── Layout ─────────────────────────────────────────────────────────── */
+    .container { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+
+
+    /* ── Hero ───────────────────────────────────────────────────────────── */
+    .pp-hero {
+      padding-top: calc(var(--nav-h, 64px) + clamp(3rem, 8vw, 5.5rem));
+      background: linear-gradient(140deg, var(--primary-dark) 0%, var(--primary) 55%, #6366F1 100%);
+      padding: clamp(3rem, 8vw, 5.5rem) 1.5rem clamp(2.75rem, 7vw, 5rem);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .pp-hero::before {
+      content: '';
+      position: absolute;
+      top: -40%; left: -30%;
+      width: 160%; height: 180%;
+      background: radial-gradient(ellipse at 65% 35%, rgba(34,211,238,.18) 0%, transparent 58%);
+      pointer-events: none;
+    }
+    .pp-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -20%; right: -20%;
+      width: 80%; height: 80%;
+      background: radial-gradient(ellipse, rgba(255,255,255,.06) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .pp-hero__icon-wrap {
+      position: relative; z-index: 1;
+      width: 88px; height: 88px;
+      background: rgba(255,255,255,.14);
+      border: 1.5px solid rgba(255,255,255,.28);
+      border-radius: 22px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 2rem;
+    }
+    .pp-hero__icon-wrap svg { width: 48px; height: 48px; }
+    .pp-hero h1 { color: #fff; position: relative; z-index: 1; margin-bottom: 0.7rem; }
+    .pp-hero__sub {
+      position: relative; z-index: 1;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: rgba(255,255,255,.80);
+      font-weight: 300;
+      margin-bottom: 2.25rem;
+    }
+    .pp-hero__badges {
+      position: relative; z-index: 1;
+      display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      padding: 0.375rem 0.875rem;
+      border-radius: 100px;
+      font-size: 0.8rem; font-weight: 600;
+    }
+    .badge-glass {
+      background: rgba(255,255,255,.16);
+      border: 1px solid rgba(255,255,255,.28);
+      color: #fff;
+    }
+    .badge-cyan {
+      background: rgba(34,211,238,.18);
+      border: 1px solid rgba(34,211,238,.32);
+      color: #A5F3FC;
+    }
+    .badge-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: currentColor; opacity: .8;
+    }
+
+    /* ── Main content ───────────────────────────────────────────────────── */
+    .main { padding: 3rem 0 4rem; }
+
+    /* Meta row */
+    .meta-row {
+      display: flex; align-items: center; gap: 0.6rem;
+      flex-wrap: wrap;
+      padding: 0.875rem 1.1rem;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--r-sm);
+      font-size: 0.825rem; color: var(--ink-3);
+      margin-bottom: 2rem;
+    }
+    .meta-row strong { color: var(--ink-2); }
+    .meta-sep { color: var(--border-2); user-select: none; }
+
+    /* Pledge banner */
+    .pledge {
+      display: flex; gap: 1.25rem; align-items: flex-start;
+      background: linear-gradient(135deg, #EEF2FF 0%, #E0F2FE 100%);
+      border: 1px solid #C7D2FE;
+      border-radius: var(--r-lg);
+      padding: 1.75rem 2rem;
+      margin-bottom: 2rem;
+    }
+    .pledge-icon {
+      width: 50px; height: 50px; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 13px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .pledge-icon svg { width: 28px; height: 28px; }
+    .pledge-body h3 { color: var(--primary-dark); margin-top: 0; }
+    .pledge-body p  { color: #3730A3; font-size: 0.9375rem; }
+    .pledge-body strong { color: inherit; }
+
+    /* Cards */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 2rem 2rem 1.75rem;
+      margin-bottom: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow .2s ease;
+    }
+    .card:hover { box-shadow: var(--shadow-md); }
+    .card-head {
+      display: flex; align-items: center; gap: 1rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 1.125rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .card-num {
+      width: 36px; height: 36px; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--primary), #6366F1);
+      color: #fff;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.8rem; font-weight: 700;
+      letter-spacing: .02em;
+    }
+    .card h2 { margin: 0; }
+
+    /* Callout boxes */
+    .callout {
+      border-radius: var(--r-sm);
+      padding: 1rem 1.25rem;
+      margin: 1.1rem 0;
+      border-left-width: 4px;
+      border-left-style: solid;
+    }
+    .callout p { font-size: 0.9375rem; }
+    .callout-purple {
+      background: var(--primary-pale);
+      border-left-color: var(--primary);
+    }
+    .callout-purple p { color: var(--primary-dark); }
+    .callout-green {
+      background: var(--green-pale);
+      border-left-color: var(--green);
+    }
+    .callout-green p { color: var(--green-text); }
+    .callout-cyan {
+      background: var(--secondary-pale);
+      border-left-color: var(--secondary);
+    }
+    .callout-cyan p { color: #0E7490; }
+    .callout-amber {
+      background: var(--amber-pale);
+      border-left-color: var(--amber);
+    }
+    .callout-amber p { color: var(--amber-text); }
+
+    /* "What we don't do" grid */
+    .no-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 0.625rem;
+      margin: 1rem 0;
+    }
+    .no-item {
+      display: flex; align-items: center; gap: 0.625rem;
+      padding: 0.75rem 0.875rem;
+      background: var(--green-pale);
+      border: 1px solid var(--green-border);
+      border-radius: var(--r-sm);
+    }
+    .no-check {
+      width: 20px; height: 20px; flex-shrink: 0;
+      background: var(--green);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .no-check svg { width: 11px; height: 11px; }
+    .no-item span { font-size: 0.84rem; font-weight: 500; color: var(--green-text); }
+
+    /* Permissions table */
+    .overflow-x { overflow-x: auto; margin: 1rem 0; }
+    .perm-table {
+      width: 100%; border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+    .perm-table th {
+      background: var(--surface-3);
+      color: var(--ink-3);
+      font-size: 0.75rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .05em;
+      padding: 0.7rem 1rem;
+      text-align: left;
+      border-bottom: 2px solid var(--border);
+    }
+    .perm-table td {
+      padding: 0.875rem 1rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--ink-2);
+      vertical-align: top;
+    }
+    .perm-table tr:last-child td { border-bottom: none; }
+    .perm-table tbody tr:hover td { background: var(--surface-2); }
+    .perm-name {
+      font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+      font-size: 0.78rem;
+      color: var(--primary);
+      background: var(--primary-pale);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      white-space: nowrap;
+      display: inline-block;
+    }
+
+    /* Contact card */
+    .contact-block {
+      background: linear-gradient(140deg, var(--primary-dark) 0%, var(--primary) 55%, #6366F1 100%);
+      border-radius: var(--r-xl);
+      padding: 3rem 2rem 2.75rem;
+      text-align: center;
+      margin-top: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-block::before {
+      content: '';
+      position: absolute; top: -30%; right: -10%;
+      width: 60%; height: 160%;
+      background: radial-gradient(ellipse, rgba(34,211,238,.16) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .contact-block h2 { color: #fff; position: relative; z-index: 1; margin-bottom: 0.6rem; }
+    .contact-block > p { color: rgba(255,255,255,.78); position: relative; z-index: 1; margin-bottom: 1.75rem; }
+    .contact-email-btn {
+      position: relative; z-index: 1;
+      display: inline-flex; align-items: center; gap: 0.55rem;
+      background: rgba(255,255,255,.18);
+      border: 1.5px solid rgba(255,255,255,.32);
+      color: #fff;
+      padding: 0.8rem 1.75rem;
+      border-radius: 100px;
+      font-size: 1rem; font-weight: 600;
+      text-decoration: none;
+      transition: background .2s;
+    }
+    .contact-email-btn:hover { background: rgba(255,255,255,.26); text-decoration: none; }
+    .contact-email-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .contact-note {
+      position: relative; z-index: 1;
+      margin-top: 1.25rem;
+      font-size: 0.82rem; color: rgba(255,255,255,.55);
+    }
+    .contact-note:last-child { margin-bottom: 0; }
+
+    /* Footer */
+    footer {
+      background: var(--ink);
+      padding: 2.75rem 1.5rem 2.25rem;
+      text-align: center;
+    }
+    .footer-logo-row {
+      display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+      margin-bottom: 0.875rem;
+    }
+    .footer-mark {
+      width: 30px; height: 30px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .footer-mark svg { width: 17px; height: 17px; }
+    .footer-app-name { font-weight: 700; color: #fff; font-size: 1rem; }
+    .footer p {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,.45);
+      margin-bottom: 0.3rem;
+    }
+    .footer p:last-child { margin-bottom: 0; }
+    .footer-divider {
+      width: 40px; height: 1px;
+      background: rgba(255,255,255,.12);
+      margin: 1.1rem auto;
+    }
+
+    /* ── Responsive ─────────────────────────────────────────────────────── */
+    @media (max-width: 620px) {
+      .pledge         { flex-direction: column; padding: 1.5rem; }
+      .card           { padding: 1.5rem 1.25rem; }
+      .hero           { padding: 3rem 1.25rem 2.75rem; }
+      .hero-sub       { font-size: 1rem; }
+      .meta-row       { flex-direction: column; gap: 0.2rem; align-items: flex-start; }
+      .meta-sep       { display: none; }
+      .no-grid        { grid-template-columns: 1fr 1fr; }
+      .contact-block  { padding: 2.25rem 1.25rem 2rem; }
+      /* Responsive permission table */
+      .perm-table,
+      .perm-table thead,
+      .perm-table tbody,
+      .perm-table th,
+      .perm-table td,
+      .perm-table tr   { display: block; }
+      .perm-table thead { position: absolute; top: -9999px; left: -9999px; }
+      .perm-table tr    { border: 1px solid var(--border); border-radius: var(--r-sm); margin-bottom: .75rem; padding: .5rem 0; }
+      .perm-table td    { border: none; border-bottom: 1px solid var(--surface-3); padding: .5rem .875rem; }
+      .perm-table td:last-child { border-bottom: none; }
+      .perm-table td::before {
+        content: attr(data-label);
+        display: block;
+        font-size: .7rem; font-weight: 700;
+        text-transform: uppercase; letter-spacing: .05em;
+        color: var(--ink-3); margin-bottom: .25rem;
+      }
+    }
+    @media (max-width: 400px) {
+      .no-grid { grid-template-columns: 1fr; }
+    }
+
+
+
+    /* ── Official brand assets ──────────────────────────────────────────────── */
+    .brand-logo-img {
+      height: 28px;
+      width: auto;
+      display: block;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+    }
+    .brand-icon-img {
+      display: block;
+      width: 100%; height: 100%;
+      object-fit: contain;
+    }
+    /* ── Footer navigation ──────────────────────────────────────────────────── */
+    .footer-nav {
+      display: flex; gap: 0.375rem 1.5rem;
+      justify-content: center; flex-wrap: wrap;
+      margin-bottom: 0.875rem;
+    }
+    .footer-nav a {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,.52);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .footer-nav a:hover { color: rgba(255,255,255,.88); text-decoration: none; }
+    .footer-nav a[aria-current="page"] { color: rgba(255,255,255,.88); font-weight: 600; }
+    .footer-nav-sep { font-size: 0.82rem; color: rgba(255,255,255,.18); user-select: none; }
+    /* ── Print ──────────────────────────────────────────────────────────── */
+    @media print {
+
+      .pp-hero { background: var(--primary-pale) !important; print-color-adjust: exact; }
+      .pp-hero h1, .pp-hero__sub { color: var(--ink) !important; }
+      .pp-hero__badges { display: none; }
+      .card    { box-shadow: none; page-break-inside: avoid; }
+      .contact-block { background: var(--primary-pale) !important; }
+      .contact-block h2, .contact-block > p { color: var(--ink) !important; }
+      .contact-email-btn { background: var(--primary-pale) !important; color: var(--primary) !important; border-color: var(--primary) !important; }
+
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Skip navigation -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     NAVIGATION  (shared with all pages)
+══════════════════════════════════════════════════════════════════════ -->
+<header class="site-header" id="site-header" role="banner">
+  <nav class="nav container" aria-label="Main navigation">
+
+    <a href="index.html" class="nav__logo" aria-label="SnapTask home">
+      <img src="assets/logo.svg" alt="SnapTask" width="120" height="32" />
+    </a>
+
+    <ul class="nav__links" role="list">
+      <li><a href="index.html#features"     class="nav__link">Features</a></li>
+      <li><a href="index.html#how-it-works" class="nav__link">How It Works</a></li>
+      <li><a href="privacy.html" class="nav__link" aria-current="page">Privacy</a></li>
+      <li><a href="index.html#faq"          class="nav__link">FAQ</a></li>
+      <li><a href="support.html"            class="nav__link">Support</a></li>
+    </ul>
+
+    <div class="nav__actions">
+      <a href="index.html#download" class="btn btn--primary btn--sm" aria-label="Download SnapTask">
+        Download
+      </a>
+    </div>
+
+    <button
+      class="nav__burger"
+      id="nav-burger"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="nav__burger-bar"></span>
+      <span class="nav__burger-bar"></span>
+      <span class="nav__burger-bar"></span>
+    </button>
+
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation" hidden>
+    <ul class="mobile-menu__links" role="list">
+      <li><a href="index.html#features"     class="mobile-menu__link">Features</a></li>
+      <li><a href="index.html#how-it-works" class="mobile-menu__link">How It Works</a></li>
+      <li><a href="privacy.html"            class="mobile-menu__link">Privacy</a></li>
+      <li><a href="index.html#faq"          class="mobile-menu__link">FAQ</a></li>
+      <li><a href="support.html"            class="mobile-menu__link">Support</a></li>
+      <li><a href="index.html#download"     class="mobile-menu__link mobile-menu__link--cta">Download</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ── Hero ─────────────────────────────────────────────────────────────── -->
+<header class="pp-hero" role="banner">
+  <div class="pp-hero__icon-wrap" aria-hidden="true">
+    <img src="assets/favicon.png" alt="SnapTask" width="48" height="48" class="brand-icon-img" />
+  </div>
+  <h1>Privacy Policy</h1>
+  <p class="pp-hero__sub">
+    In version&nbsp;1.0, all processing happens on your device.<br>
+    Your screenshots are not transmitted to us or any third party.
+  </p>
+  <div class="pp-hero__badges" role="list">
+    <span class="badge badge-glass" role="listitem">
+      <span class="badge-dot" aria-hidden="true"></span>
+      Effective&nbsp;July&nbsp;26,&nbsp;2026
+    </span>
+    <span class="badge badge-glass" role="listitem">
+      Version&nbsp;1.0.0
+    </span>
+    <span class="badge badge-cyan" role="listitem">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M1 1l22 22M16.72 11.06A10.94 10.94 0 0119 12.55M5 5a10.94 10.94 0 0113.22 5M10.71 5.05A16 16 0 0122.56 9M1.42 9a15.91 15.91 0 014.7-2.88M8.53 16.11a6 6 0 006.95 0M12 20h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      No&nbsp;Internet&nbsp;in&nbsp;v1.0
+    </span>
+  </div>
+</header>
+
+<!-- ── Main content ──────────────────────────────────────────────────────── -->
+<main class="main" id="main-content">
+  <div class="container">
+
+    <!-- Meta strip -->
+    <div class="meta-row" role="note" aria-label="Document metadata">
+      <span><strong>App:</strong> SnapTask</span>
+      <span class="meta-sep" aria-hidden="true">·</span>
+      <span><strong>Package:</strong> com.saadelfadil.snaptask</span>
+      <span class="meta-sep" aria-hidden="true">·</span>
+      <span><strong>Last updated:</strong> July 26, 2026</span>
+      <span class="meta-sep" aria-hidden="true">·</span>
+      <span><strong>Applies to:</strong> SnapTask&nbsp;v1.0.0</span>
+    </div>
+
+    <!-- Privacy pledge banner -->
+    <div class="pledge" role="note" aria-label="Privacy pledge">
+      <div class="pledge-icon" aria-hidden="true">
+        <img src="assets/favicon.png" alt="" width="28" height="28" />
+      </div>
+      <div class="pledge-body">
+        <h3>Our Privacy Pledge</h3>
+        <p>SnapTask version&nbsp;1.0 declares <strong>no internet permission</strong> — verifiable in the app manifest. Every screenshot you share is processed entirely on your device using an on-device ML Kit model. In version&nbsp;1.0, your text, data, and actions are not transmitted to any server and remain on your device.</p>
+      </div>
+    </div>
+
+    <!-- ─── Section 1: Introduction ──────────────────────────────────────── -->
+    <section class="card" aria-labelledby="s1-heading">
+      <div class="card-head">
+        <div class="card-num" aria-hidden="true">01</div>
+        <h2 id="s1-heading">Introduction</h2>
+      </div>
+      <p>SnapTask ("we", "our", or "the app") is a privacy-first productivity application for Android. This Privacy Policy explains how SnapTask handles information when you use it.</p>
+      <p>SnapTask version&nbsp;1.0 is designed to perform all processing locally on your device. In this version, we do not operate servers, collect analytics, or require an account. This policy describes how SnapTask version&nbsp;1.0 handles your data.</p>
+      <p>By using SnapTask, you agree to the practices described in this Privacy Policy. If you do not agree, please uninstall the application at any time.</p>
+    </section>
+
+    <!-- ─── Section 2: What We Process ───────────────────────────────────── -->
+    <section class="card" aria-labelledby="s2-heading">
+      <div class="card-head">
+        <div class="card-num" aria-hidden="true">02</div>
+        <h2 id="s2-heading">Information We Process (Locally)</h2>
+      </div>
+      <p>SnapTask processes the following information <strong>entirely on your device</strong>, using your device's own storage and computing resources:</p>
+      <ul>
+        <li><strong>Screenshots you share:</strong> Image files you explicitly share to SnapTask via Android's Share Intent. SnapTask only ever sees images you consciously choose to send it.</li>
+        <li><strong>Extracted text:</strong> Text recognized by the on-device OCR model from your screenshot.</li>
+        <li><strong>Detected entities:</strong> Dates, times, phone numbers, email addresses, URLs, prices, and addresses automatically identified within the extracted text.</li>
+        <li><strong>Reminders:</strong> Reminders you choose to create from recognized content, including their title, date, time, and notes.</li>
+        <li><strong>Action history:</strong> A local record of actions (calls initiated, emails opened, calendar events created) that you confirmed within the app.</li>
+        <li><strong>App settings:</strong> Preferences you configure, stored locally using Android's standard storage APIs.</li>
+      </ul>
+      <div class="callout callout-green">
+        <p><strong>In SnapTask version&nbsp;1.0, all of the above stays exclusively on your device.</strong> None of this information is transmitted, uploaded, synchronized, or accessible to us, third-party analytics services, advertisers, or any external party. If any of these practices change in a future release, this Privacy Policy will be updated and users informed before the change takes effect.</p>
+      </div>
+    </section>
+
+    <!-- ─── Section 3: On-Device OCR ─────────────────────────────────────── -->
+    <section class="card" aria-labelledby="s3-heading">
+      <div class="card-head">
+        <div class="card-num" aria-hidden="true">03</div>
+        <h2 id="s3-heading">On-Device Text Recognition (OCR)</h2>
+      </div>
+      <p>SnapTask uses <strong>Google ML Kit's bundled text recognition model</strong> (<code>com.google.mlkit:text-recognition</code>, bundled Latin variant). "Bundled" means the recognition model is compiled directly into the application's APK file — no model download at runtime, no network call, no cloud API.</p>
+      <div class="callout callout-cyan">
+        <p>With ML Kit bundled models, text recognition occurs entirely on-device. Your screenshot content is <strong>never sent to Google or any remote server</strong> for processing. The model runs in your device's memory; the result stays on your device.</p>
+      </div>
+      <p>This is verifiable in version&nbsp;1.0: SnapTask's <code>AndroidManifest.xml</code> does not declare the <code>INTERNET</code> permission. Without this permission, an Android application is technically incapable of making any network request, regardless of which libraries it includes.</p>
+      <p>Entity extraction (identifying phone numbers, dates, emails, links, etc.) is performed using deterministic rule-based algorithms written in Kotlin — no machine learning model, no server calls.</p>
+      <p>For Google's own privacy documentation on ML Kit, see <a href="https://developers.google.com/ml-kit/terms" target="_blank" rel="noopener noreferrer">developers.google.com/ml-kit/terms</a>.</p>
+    </section>
+
+    <!-- ─── Section 4: How Your Information Is Used ──────────────────────── -->
+    <section class="card" aria-labelledby="s4-heading">
+      <div class="card-head">
+        <div class="card-num" aria-hidden="true">04</div>
+        <h2 id="s4-heading">How Your Information Is Used</h2>
+      </div>
+      <p>All processing is performed locally, exclusively to provide the features you have requested:</p>
+      <ol>
+        <li><strong>OCR:</strong> Your screenshot is decoded and passed to the on-device text recognition model to extract readable text.</li>
+        <li><strong>Entity extraction:</strong> The extracted text is analyzed by rule-based algorithms to identify actionable entities (dates, phone numbers, emails, links, addresses, prices).</li>
+        <li><strong>Action suggestions:</strong> Identified entities are ranked and presented as suggested actions for you to choose from — create a reminder, open a link, dial a number, add a calendar event, and so on.</li>
+        <li><strong>Reminder scheduling:</strong> If you create a reminder, it is stored locally and scheduled using Android's AlarmManager. No cloud service is involved.</li>
+        <li><strong>Calendar events:</strong> If you choose "Add to Calendar", SnapTask launches your device's calendar app via Android's standard Calendar Insert Intent, pre-filled with event details. SnapTask does not write to your calendar directly — you review and confirm within your calendar app.</li>
+        <li><strong>History:</strong> A local history of your screenshots and confirmed actions is maintained for your reference and is visible only to you.</li>
+      </ol>
+      <p>In version&nbsp;1.0, we do not use your information for advertising, user profiling, machine learning training, product analytics, or any purpose other than operating the app locally for you on your own device.</p>
+    </section>
+
+    <!-- ─── Section 5: What We Do Not Do ─────────────────────────────────── -->
+    <section class="card" aria-labelledby="s5-heading">
+      <div class="card-head">
+        <div class="card-num" aria-hidden="true">05</div>
+        <h2 id="s5-heading">What We Do Not Do</h2>
+      </div>
+      <p>The following describes SnapTask version&nbsp;1.0. If any of these practices change in a future release, this Privacy Policy will be updated and users notified before the change takes effect:</p>
+      <div class="no-grid" role="list">
+        <div class="no-item" role="listitem">
+          <div class="no-check" aria-label="Confirmed">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span>No internet access</span>
+        </div>
+        <div class="no-item" role="listitem">
+          <div class="no-check" aria-label="Confirmed">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span>No data collection</span>
+        </div>
+        <div class="no-item" role="listitem">
+          <div class="no-check" aria-label="Confirmed">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span>No user accounts</span>
+        </div>
+        <div class="no-item" role="listitem">
+          <div class="no-check" aria-label="Confirmed">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span>No cloud sync</span>
+        </div>
+        <div class="no-item" role="listitem">
+          <div class="no-check" aria-label="Confirmed">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span>No analytics</span>
+        </div>
+        <div class="no-item" role="listitem">
+          <div class="no-check" aria-label="Confirmed">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span>No crash reporting</span>
+        </div>
+        <div class="no-item" role="listitem">
+          <div class="no-check" aria-label="Confirmed">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span>No advertising</span>
+        </div>
+        <div class="no-item" role="listitem">
+          <div class="no-check" aria-label="Confirmed">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span>No data selling</span>
+        </div>
+        <div class="no-item" role="listitem">
+          <div class="no-check" aria-label="Confirmed">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span>No data sharing</span>
+        </div>
+        <div class="no-item" role="listitem">
+          <div class="no-check" aria-label="Confirmed">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span>No user tracking</span>
+        </div>
+        <div class="no-item" role="listitem">
+          <div class="no-check" aria-label="Confirmed">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span>No user profiling</span>
+        </div>
+        <div class="no-item" role="listitem">
+          <div class="no-check" aria-label="Confirmed">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span>No registration</span>
+        </div>
+      </div>
+      <div class="callout callout-green" style="margin-top:1.1rem;">
+        <p><strong>Advertising:</strong> SnapTask version&nbsp;1.0 does not display advertisements. If advertisements are introduced in a future version, this Privacy Policy will be updated prior to release and users will be notified before the change takes effect.</p>
+      </div>
+      <div class="callout callout-green">
+        <p><strong>Analytics &amp; crash reporting:</strong> SnapTask version&nbsp;1.0 does not use analytics or crash reporting services. No behavioral data or diagnostic reports are collected or transmitted.</p>
+      </div>
+    </section>
+
+    <!-- ─── Section 6: Data Storage & Retention ──────────────────────────── -->
+    <section class="card" aria-labelledby="s6-heading">
+      <div class="card-head">
+        <div class="card-num" aria-hidden="true">06</div>
+        <h2 id="s6-heading">Data Storage &amp; Retention</h2>
+      </div>
+      <p>All data created by SnapTask is stored in the <strong>app's private local storage</strong> on your Android device — a protected directory that only SnapTask can access, enforced by Android's security model.</p>
+      <ul>
+        <li><strong>Screenshot images:</strong> When you share an image to SnapTask, a copy is saved in the app's private storage directory. A small thumbnail is generated for display purposes.</li>
+        <li><strong>Extracted text and entities:</strong> Recognized text and detected entities are stored in a local SQLite database alongside each screenshot record.</li>
+        <li><strong>Reminders:</strong> Stored in the local database. Alarm triggers are registered with Android's AlarmManager and are re-registered automatically after device reboot.</li>
+        <li><strong>Action history:</strong> A record of confirmed actions is stored locally for your reference.</li>
+      </ul>
+
+      <h3>Deleting Your Data</h3>
+      <p>You have complete control over all your data at all times:</p>
+      <ul>
+        <li><strong>Individual screenshots:</strong> Swipe to delete from the History screen. Deleted items enter a 24-hour grace period (allowing undo), after which they are permanently erased, including their image files, from your device.</li>
+        <li><strong>Bulk deletion:</strong> Long-press to select multiple screenshots and delete them together.</li>
+        <li><strong>Individual reminders:</strong> Delete any reminder from within the Reminders screen.</li>
+        <li><strong>Everything:</strong> Go to Android Settings → Apps → SnapTask → Storage → Clear Data, or simply uninstall SnapTask. Either action permanently removes all data from your device with no residual copies anywhere.</li>
+      </ul>
+      <div class="callout callout-purple">
+        <p>Because no data is ever stored on a server, there is no remote deletion process. Clearing or uninstalling the app removes all SnapTask data permanently and completely.</p>
+      </div>
+    </section>
+
+    <!-- ─── Section 7: App Permissions ──────────────────────────────────── -->
+    <section class="card" aria-labelledby="s7-heading">
+      <div class="card-head">
+        <div class="card-num" aria-hidden="true">07</div>
+        <h2 id="s7-heading">App Permissions</h2>
+      </div>
+      <p>SnapTask version&nbsp;1.0 declares only the three permissions strictly necessary for its core reminder functionality. The table below lists every permission declared in the application's <code>AndroidManifest.xml</code>. <strong>INTERNET is not declared</strong> in version&nbsp;1.0 — the app is architecturally incapable of network communication.</p>
+      <div class="overflow-x">
+        <table class="perm-table" role="table" aria-label="App permissions">
+          <thead>
+            <tr>
+              <th scope="col">Permission</th>
+              <th scope="col">Required for</th>
+              <th scope="col">How it is used</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Permission">
+                <span class="perm-name">POST_NOTIFICATIONS</span>
+              </td>
+              <td data-label="Required for">Reminder alerts</td>
+              <td data-label="How it is used">Displays reminder notifications at the time you scheduled them. This permission is requested only at the moment you save your first reminder. Denying it still saves the reminder — it simply cannot alert you when it triggers.</td>
+            </tr>
+            <tr>
+              <td data-label="Permission">
+                <span class="perm-name">SCHEDULE_EXACT_ALARM</span>
+              </td>
+              <td data-label="Required for">Precise reminder timing</td>
+              <td data-label="How it is used">Allows reminders to fire at the exact minute you chose. If this permission is not granted, reminders still fire, but within an approximate time window rather than to the minute. Declared as <code>SCHEDULE_EXACT_ALARM</code> (not <code>USE_EXACT_ALARM</code>) per Google Play policy for reminder and alarm applications.</td>
+            </tr>
+            <tr>
+              <td data-label="Permission">
+                <span class="perm-name">RECEIVE_BOOT_COMPLETED</span>
+              </td>
+              <td data-label="Required for">Reminder recovery after reboot</td>
+              <td data-label="How it is used">Android automatically clears all scheduled alarms when the device restarts. This permission lets SnapTask re-register your pending reminders after a reboot so they still fire on time. No personal data is read or transmitted during this process.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout callout-green" style="margin-top: 1.25rem;">
+        <p><strong>INTERNET permission: not declared in version&nbsp;1.0.</strong> SnapTask version&nbsp;1.0 does not request network access, meaning it is technically incapable of connecting to the internet, sending data to external servers, or receiving remote content. If a future version requires network access for an optional feature, this permission will be added at that time and this Privacy Policy will be updated beforehand.</p>
+      </div>
+    </section>
+
+    <!-- ─── Section 8: Third-Party Services ──────────────────────────────── -->
+    <section class="card" aria-labelledby="s8-heading">
+      <div class="card-head">
+        <div class="card-num" aria-hidden="true">08</div>
+        <h2 id="s8-heading">Third-Party Services &amp; Libraries</h2>
+      </div>
+      <h3>Google ML Kit — Bundled Text Recognition</h3>
+      <p>SnapTask uses ML Kit's bundled Latin text recognition model (<code>com.google.mlkit:text-recognition</code> v16.0.1). With the bundled variant:</p>
+      <ul>
+        <li>The ML model is shipped inside the app's APK — no download is performed at runtime.</li>
+        <li>Recognition runs in your device's memory with no network calls to Google.</li>
+        <li>Your screenshot content is never sent to Google's servers for inference.</li>
+      </ul>
+      <p>Google's privacy policy and ML Kit terms of service apply to this SDK at <a href="https://developers.google.com/ml-kit/terms" target="_blank" rel="noopener noreferrer">developers.google.com/ml-kit/terms</a>. However, because no data is transmitted, the practical privacy impact for users of SnapTask is zero.</p>
+
+      <h3>Android Calendar Intent</h3>
+      <p>When you choose "Add to Calendar", SnapTask uses Android's standard <code>CalendarContract.ACTION_INSERT</code> Intent to open your installed calendar app (Google Calendar, Samsung Calendar, Outlook, or any other). SnapTask pre-fills the event details but does not write to your calendar directly. You review the event and save it inside your own calendar app. What happens after that handoff is governed by your calendar app's own privacy policy.</p>
+
+      <h3>Android System Services</h3>
+      <p>When you confirm actions such as calling a number, sending an email, or opening a link, SnapTask invokes Android's standard Intent system to hand off to the appropriate app (dialer, email client, browser). SnapTask does not intercept, read, or log the content of those interactions.</p>
+
+      <h3>Open-Source Libraries</h3>
+      <p>SnapTask version&nbsp;1.0 is built with open-source libraries including Kotlin, Jetpack Compose, Room, Koin, Coil, kotlinx.coroutines, and others. The full list with license attributions is available in the app's open-source licenses section. These libraries run locally on your device and, in version&nbsp;1.0, do not transmit data externally.</p>
+
+      <div class="callout callout-amber">
+        <p><strong>Future versions</strong> may introduce optional online features such as cloud backup or enhanced recognition. Any such addition will be accompanied by an updated Privacy Policy, a clear in-app disclosure, and explicit user consent before any network access occurs. SnapTask version&nbsp;1.0 has no online features of any kind.</p>
+      </div>
+    </section>
+
+    <!-- ─── Section 9: Children's Privacy ───────────────────────────────── -->
+    <section class="card" aria-labelledby="s9-heading">
+      <div class="card-head">
+        <div class="card-num" aria-hidden="true">09</div>
+        <h2 id="s9-heading">Children's Privacy</h2>
+      </div>
+      <p>SnapTask does not knowingly collect, store, or transmit personal information from any user, including children under the age of 13 (or the applicable minimum age in your jurisdiction under laws such as COPPA in the United States, or equivalent legislation elsewhere).</p>
+      <p>Because SnapTask version&nbsp;1.0 collects no data whatsoever — not even anonymized analytics or crash reports — there is no personal information of any kind that could relate to a child. All data is stored only locally on the user's own device and is not transmitted anywhere.</p>
+      <p>SnapTask is a general-purpose productivity application and is not specifically directed at children. Parents and guardians who permit children to use this app may do so knowing that no information about the child will be collected, transmitted to us, or shared with any third party.</p>
+    </section>
+
+    <!-- ─── Section 10: Your Rights & Controls ───────────────────────────── -->
+    <section class="card" aria-labelledby="s10-heading">
+      <div class="card-head">
+        <div class="card-num" aria-hidden="true">10</div>
+        <h2 id="s10-heading">Your Rights &amp; Data Controls</h2>
+      </div>
+      <p>Because all data is stored exclusively on your device, you have complete, direct control at all times without needing to submit a request to us:</p>
+      <ul>
+        <li><strong>Access:</strong> All your data is visible within the app — the History screen shows screenshots, the Reminders screen shows your reminders.</li>
+        <li><strong>Deletion:</strong> Delete individual items in-app, or erase everything through Android's storage settings or by uninstalling.</li>
+        <li><strong>Correction:</strong> Detected entities can be edited directly on the Review screen before any action is taken.</li>
+        <li><strong>Portability:</strong> Your data resides in the app's private storage. Android's built-in backup mechanisms (if enabled by you) may include it in device backups.</li>
+        <li><strong>No account to close:</strong> There is no user account, no profile, and no server-side record to request deletion of.</li>
+      </ul>
+      <p>If you are a resident of the European Union (GDPR), the United Kingdom (UK GDPR), California (CCPA/CPRA), or any other jurisdiction with specific data subject rights, those rights are automatically and fully satisfied: there is no personal data outside your device to access, delete, restrict, object to, or port.</p>
+    </section>
+
+    <!-- ─── Section 11: Security ─────────────────────────────────────────── -->
+    <section class="card" aria-labelledby="s11-heading">
+      <div class="card-head">
+        <div class="card-num" aria-hidden="true">11</div>
+        <h2 id="s11-heading">Security</h2>
+      </div>
+      <p>SnapTask's security posture is defined primarily by its architecture:</p>
+      <ul>
+        <li><strong>No network attack surface in version&nbsp;1.0:</strong> With no internet permission declared, there is no data in transit and no remote server that could be compromised to expose your information.</li>
+        <li><strong>Private app storage:</strong> All data is stored in Android's app-private directory, inaccessible to other apps without explicit system privileges.</li>
+        <li><strong>No credentials:</strong> SnapTask requires no username, password, or authentication token. There is nothing to phish, leak, or steal remotely.</li>
+        <li><strong>Receiver protection:</strong> Android broadcast receivers used for alarm delivery are declared non-exported, reachable only via explicit, immutable PendingIntents from within the app.</li>
+        <li><strong>No third-party SDKs with network access:</strong> No analytics, advertising, or crash-reporting SDKs are present in version 1.0.</li>
+      </ul>
+      <p>While no storage method is completely secure against physical device access, SnapTask eliminates the most common and impactful attack vectors — remote data interception, server breach, and credential theft — entirely by design.</p>
+    </section>
+
+    <!-- ─── Section 12: Changes to This Policy ───────────────────────────── -->
+    <section class="card" aria-labelledby="s12-heading">
+      <div class="card-head">
+        <div class="card-num" aria-hidden="true">12</div>
+        <h2 id="s12-heading">Changes to This Privacy Policy</h2>
+      </div>
+      <p>We may update this Privacy Policy when new features are introduced or when required by law. When we do:</p>
+      <ul>
+        <li>The updated policy will be published at this URL with a new "Last Updated" date.</li>
+        <li>Any change that would result in data being transmitted off your device will be announced within the app <em>before</em> the updated version ships, with explicit user consent required.</li>
+        <li>The Google Play Store listing will always link to the current version of this document.</li>
+        <li>Minor clarifications (with no change to data practices) may be made without a separate notice.</li>
+      </ul>
+      <p>Continued use of SnapTask after a policy update constitutes your acceptance of the revised policy. If you disagree with any changes, you may uninstall the application at any time.</p>
+      <div class="callout callout-purple">
+        <p>The commitment that <strong>SnapTask version&nbsp;1.0 does not collect, transmit, or share your personal data</strong> is a core product principle. Any future version that changes this will require a clearly opt-in user action, a dedicated in-app disclosure, and an update to this Privacy Policy published before the change ships.</p>
+      </div>
+    </section>
+
+    <!-- ─── Contact ──────────────────────────────────────────────────────── -->
+    <div class="contact-block" id="contact" role="region" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Questions? Contact Us.</h2>
+      <p>If you have any questions, concerns, or feedback about this Privacy Policy or how SnapTask handles your data, we'd love to hear from you.</p>
+      <a href="mailto:saadelfadil18@gmail.com" class="contact-email-btn">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        saadelfadil18@gmail.com
+      </a>
+      <p class="contact-note">We typically respond within a few business days.</p>
+    </div>
+
+  </div><!-- /container -->
+</main>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     FOOTER  (shared with all pages)
+══════════════════════════════════════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+
+    <div class="footer__layout">
+
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="SnapTask home">
+          <img src="assets/logo.svg" alt="SnapTask" width="110" height="28" loading="lazy" />
+        </a>
+        <p class="footer__tagline">Turn screenshots into real actions.</p>
+        <p class="footer__meta">Version 1.0.0 · Android</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer navigation">
+
+        <div class="footer__nav-group">
+          <h3 class="footer__nav-heading">Product</h3>
+          <ul class="footer__nav-list" role="list">
+            <li><a href="index.html#features"     class="footer__nav-link">Features</a></li>
+            <li><a href="index.html#how-it-works" class="footer__nav-link">How It Works</a></li>
+            <li><a href="index.html#faq"          class="footer__nav-link">FAQ</a></li>
+            <li><a href="index.html#download"     class="footer__nav-link">Download</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__nav-group">
+          <h3 class="footer__nav-heading">Legal</h3>
+          <ul class="footer__nav-list" role="list">
+            <li><a href="privacy.html" class="footer__nav-link" aria-current="page">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__nav-group">
+          <h3 class="footer__nav-heading">Support</h3>
+          <ul class="footer__nav-list" role="list">
+            <li><a href="support.html" class="footer__nav-link">Help Center</a></li>
+            <li>
+              <a href="mailto:saadelfadil18@gmail.com" class="footer__nav-link">
+                saadelfadil18@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </nav>
+
+    </div><!-- /footer__layout -->
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">
+        &copy; 2026 SnapTask. Developed by
+        <a href="mailto:saadelfadil18@gmail.com" class="footer__nav-link">Saad El Fadil</a>.
+      </p>
+      <p class="footer__legal-note">
+        This is the official privacy policy for SnapTask v1.0.0.
+        <a href="support.html" class="footer__nav-link">Contact support</a>.
+      </p>
+    </div>
+
+  </div>
+</footer><!-- /site-footer -->
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

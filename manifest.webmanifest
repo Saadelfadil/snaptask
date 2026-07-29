@@ -1,0 +1,43 @@
+{
+  "name": "SnapTask",
+  "short_name": "SnapTask",
+  "description": "Turn screenshots into real actions. On-device OCR, smart entity detection, zero cloud.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFFFFF",
+  "theme_color": "#4F46E5",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["productivity", "utilities"],
+  "icons": [
+    {
+      "src": "assets/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/hero-image.png",
+      "sizes": "320x640",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "SnapTask detects entities in a screenshot"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "com.saadelfadil.snaptask"
+    }
+  ],
+  "prefer_related_applications": true
+}
