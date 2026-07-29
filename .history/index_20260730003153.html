@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- ── Meta ──────────────────────────────────────────────────────────── -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4F46E5" />
+
+  <!-- ── SEO ───────────────────────────────────────────────────────────── -->
+  <title>SnapTask — Turn Screenshots into Real Actions</title>
+  <meta name="description" content="SnapTask is a privacy-first Android app that turns your screenshots into actions. On-device OCR, smart entity detection, zero cloud. No account required." />
+  <meta name="keywords" content="SnapTask, screenshot to action, on-device OCR, Android productivity, privacy-first, offline, reminder from screenshot, ML Kit" />
+  <meta name="author" content="Saad El Fadil" />
+  <link rel="canonical" href="https://saadelfadil.github.io/snaptask/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://saadelfadil.github.io/snaptask/" />
+  <meta property="og:title"       content="SnapTask — Turn Screenshots into Real Actions" />
+  <meta property="og:description" content="Share a screenshot. SnapTask reads it, detects what matters, and suggests the right action — entirely on your device." />
+  <meta property="og:image"       content="assets/hero-image.png" />
+  <meta property="og:site_name"   content="SnapTask" />
+  <meta property="og:locale"      content="en_US" />
+
+  <!-- ── Twitter Card ──────────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="SnapTask — Turn Screenshots into Real Actions" />
+  <meta name="twitter:description" content="Share a screenshot. SnapTask reads it, detects what matters, and suggests the right action — entirely on your device." />
+  <meta name="twitter:image"       content="assets/hero-image.png" />
+
+  <!-- ── Favicon ───────────────────────────────────────────────────────── -->
+  <link rel="icon"             type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon"                  href="assets/favicon.png" />
+  <link rel="manifest"                          href="manifest.webmanifest" />
+  <meta name="apple-mobile-web-app-capable"     content="yes" />
+  <meta name="apple-mobile-web-app-title"       content="SnapTask" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="author"                           content="Saad El Fadil" />
+
+  <!-- ── Fonts ─────────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ── Styles ────────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ── Structured Data ───────────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SnapTask",
+    "operatingSystem": "Android",
+    "applicationCategory": "ProductivityApplication",
+    "description": "Turn screenshots into real actions using on-device OCR. Privacy-first, offline, no account required.",
+    "url": "https://saadelfadil.github.io/snaptask/",
+    "author": {
+      "@type": "Person",
+      "name": "Saad El Fadil",
+      "email": "saadelfadil18@gmail.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+</head>
+
+<body>
+
+  <!-- Skip navigation for keyboard / screen-reader users -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════════════════════════════════ -->
+  <header class="site-header" id="site-header" role="banner">
+    <nav class="nav container" aria-label="Main navigation">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav__logo" aria-label="SnapTask home">
+        <img src="assets/logo.png" alt="SnapTask" width="120" height="32" />
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav__links" role="list">
+        <li><a href="#features"   class="nav__link">Features</a></li>
+        <li><a href="#how-it-works" class="nav__link">How It Works</a></li>
+        <li><a href="#privacy"    class="nav__link">Privacy</a></li>
+        <li><a href="#faq"        class="nav__link">FAQ</a></li>
+        <li><a href="support.html" class="nav__link">Support</a></li>
+      </ul>
+
+      <!-- CTA -->
+      <div class="nav__actions">
+        <a href="#download" class="btn btn--primary btn--sm" aria-label="Download SnapTask">
+          Download
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button
+        class="nav__burger"
+        id="nav-burger"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="nav__burger-bar"></span>
+        <span class="nav__burger-bar"></span>
+        <span class="nav__burger-bar"></span>
+      </button>
+
+    </nav>
+
+    <!-- Mobile menu (hidden by default) -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation" hidden>
+      <ul class="mobile-menu__links" role="list">
+        <li><a href="#features"     class="mobile-menu__link">Features</a></li>
+        <li><a href="#how-it-works" class="mobile-menu__link">How It Works</a></li>
+        <li><a href="#privacy"      class="mobile-menu__link">Privacy</a></li>
+        <li><a href="#faq"          class="mobile-menu__link">FAQ</a></li>
+        <li><a href="support.html"  class="mobile-menu__link">Support</a></li>
+        <li><a href="#download"     class="mobile-menu__link mobile-menu__link--cta">Download</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <main id="main-content">
+
+    <!-- ════════════════════════════════════════════════════════════════════
+         HERO
+    ════════════════════════════════════════════════════════════════════ -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+
+      <!-- Background decorations -->
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__blob hero__blob--1"></div>
+        <div class="hero__blob hero__blob--2"></div>
+        <div class="hero__grid"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero__layout">
+
+          <!-- Left column: copy -->
+          <div class="hero__copy">
+
+            <!-- Badge -->
+            <div class="badge" aria-label="Version 1.0 — Available soon">
+              <span class="badge__dot" aria-hidden="true"></span>
+              Version 1.0 · Coming to Google Play
+            </div>
+
+            <!-- Headline -->
+            <h1 class="hero__headline" id="hero-heading">
+              Turn screenshots<br>into
+              <span class="hero__headline-gradient">real actions.</span>
+            </h1>
+
+            <!-- Description -->
+            <p class="hero__description">
+              Share any screenshot to SnapTask. It reads the text,
+              detects what matters — dates, phones, links, prices —
+              and instantly suggests the right action.
+              <strong>All on your device. No cloud. No account.</strong>
+            </p>
+
+            <!-- Buttons -->
+            <div class="hero__buttons">
+              <a
+                href="#download"
+                class="btn btn--primary btn--lg"
+                id="download"
+                aria-label="Available soon on Google Play"
+              >
+                <svg class="btn__icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M3.18 23.82a2 2 0 002.78.4l10.82-6.25-2.83-2.83L3.18 23.82zM22.62 10.4a2 2 0 000-3.46L19.3 5.07l-3.06 3.07 3.06 3.07 3.32-1.81zM2 .72A2 2 0 00.09 2.9v18.2A2 2 0 002 23.28L13.95 12 2 .72zm11.95.9L4.52 5.87l3.06 3.06 6.37-6.37-.22-.22a2 2 0 00-1.78.28z"/>
+                </svg>
+                Available Soon on Google Play
+              </a>
+
+              <a href="privacy.html" class="btn btn--ghost btn--lg">
+                Privacy Policy
+                <svg class="btn__icon btn__icon--right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Trust strip -->
+            <div class="hero__trust" role="list" aria-label="Privacy highlights">
+              <div class="trust-item" role="listitem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <path d="M9 12l2 2 4-4"/>
+                </svg>
+                No cloud
+              </div>
+              <div class="trust-item" role="listitem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 8v4l3 3"/>
+                </svg>
+                Works offline
+              </div>
+              <div class="trust-item" role="listitem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="3" y="11" width="18" height="11" rx="2"/>
+                  <path d="M7 11V7a5 5 0 0110 0v4"/>
+                </svg>
+                No account needed
+              </div>
+              <div class="trust-item" role="listitem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <line x1="1" y1="1" x2="23" y2="23"/>
+                  <path d="M16.72 11.06A10.94 10.94 0 0119 12.55M5 5a10.94 10.94 0 0113.22 5M10.71 5.05A16 16 0 0122.56 9M1.42 9a15.91 15.91 0 014.7-2.88M8.53 16.11a6 6 0 006.95 0M12 20h.01"/>
+                </svg>
+                No internet required
+              </div>
+            </div>
+
+          </div><!-- /hero__copy -->
+
+          <!-- Right column: product image -->
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero__phone-wrap">
+              <div class="hero__phone-glow"></div>
+              <img
+                src="assets/hero-image.png"
+                alt="SnapTask app showing detected entities and action suggestions on a screenshot"
+                class="hero__phone-img"
+                width="320"
+                height="640"
+                loading="eager"
+              />
+            </div>
+          </div>
+
+        </div><!-- /hero__layout -->
+      </div>
+
+    </section><!-- /hero -->
+
+
+    <!-- ════════════════════════════════════════════════════════════════════
+         FEATURES
+    ════════════════════════════════════════════════════════════════════ -->
+    <section class="features section" id="features" aria-labelledby="features-heading">
+      <div class="container">
+
+        <!-- Section label + heading -->
+        <div class="section-header">
+          <span class="section-label">Features</span>
+          <h2 class="section-title" id="features-heading">
+            Everything you need.<br>Nothing you don't.
+          </h2>
+          <p class="section-description">
+            SnapTask does one thing exceptionally well — it turns the text in
+            your screenshots into the actions you actually want to take.
+          </p>
+        </div>
+
+        <!-- Feature grid -->
+        <div class="features__grid" role="list">
+
+          <!-- 1 -->
+          <article class="feature-card" role="listitem">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <line x1="10" y1="9" x2="8" y2="9"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">On-Device OCR</h3>
+            <p class="feature-card__description">
+              Powered by Google's bundled ML Kit text recognition model.
+              All reading happens locally — your screenshots never leave your phone.
+            </p>
+          </article>
+
+          <!-- 2 -->
+          <article class="feature-card" role="listitem">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                <line x1="11" y1="8" x2="11" y2="14"/>
+                <line x1="8" y1="11" x2="14" y2="11"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Smart Entity Detection</h3>
+            <p class="feature-card__description">
+              Automatically identifies dates, times, phone numbers, emails,
+              URLs, addresses, and prices — from any screenshot content.
+            </p>
+          </article>
+
+          <!-- 3 -->
+          <article class="feature-card" role="listitem">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <line x1="1" y1="1" x2="23" y2="23"/>
+                <path d="M16.72 11.06A10.94 10.94 0 0119 12.55M5 5a10.94 10.94 0 0113.22 5M10.71 5.05A16 16 0 0122.56 9M1.42 9a15.91 15.91 0 014.7-2.88M8.53 16.11a6 6 0 006.95 0M12 20h.01"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Fully Offline</h3>
+            <p class="feature-card__description">
+              SnapTask requires no internet connection. The app declares no
+              INTERNET permission — it is technically incapable of sending your data anywhere.
+            </p>
+          </article>
+
+          <!-- 4 -->
+          <article class="feature-card" role="listitem">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Smart Reminders</h3>
+            <p class="feature-card__description">
+              Spotted a date in a screenshot? SnapTask creates a reminder
+              with the right time, title, and context — with one tap.
+            </p>
+          </article>
+
+          <!-- 5 -->
+          <article class="feature-card" role="listitem">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Privacy-First</h3>
+            <p class="feature-card__description">
+              No account. No tracking. No analytics. No ads. Your screenshots
+              stay on your device — period.
+            </p>
+          </article>
+
+          <!-- 6 -->
+          <article class="feature-card" role="listitem">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+                <line x1="12" y1="12" x2="12" y2="12"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">No Account Required</h3>
+            <p class="feature-card__description">
+              Open the app and start using it immediately. No sign-up, no
+              login, no email. Just productivity.
+            </p>
+          </article>
+
+        </div><!-- /features__grid -->
+
+      </div>
+    </section><!-- /features -->
+
+
+    <!-- ════════════════════════════════════════════════════════════════════
+         HOW IT WORKS
+    ════════════════════════════════════════════════════════════════════ -->
+    <section class="how-it-works section" id="how-it-works" aria-labelledby="how-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">How It Works</span>
+          <h2 class="section-title" id="how-heading">
+            From screenshot to action<br>in seconds.
+          </h2>
+          <p class="section-description">
+            No typing. No copying. No switching apps.
+            Just share and go.
+          </p>
+        </div>
+
+        <!-- Steps -->
+        <ol class="steps" aria-label="How SnapTask works">
+
+          <li class="step">
+            <div class="step__number" aria-hidden="true">01</div>
+            <div class="step__content">
+              <div class="step__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <circle cx="8.5" cy="8.5" r="1.5"/>
+                  <polyline points="21 15 16 10 5 21"/>
+                </svg>
+              </div>
+              <h3 class="step__title">Share a screenshot</h3>
+              <p class="step__description">
+                Take a screenshot of anything — a conversation, a document,
+                a booking confirmation, a recipe, anything. Then tap
+                <strong>Share → SnapTask</strong>.
+              </p>
+            </div>
+            <div class="step__connector" aria-hidden="true"></div>
+          </li>
+
+          <li class="step">
+            <div class="step__number" aria-hidden="true">02</div>
+            <div class="step__content">
+              <div class="step__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                  <path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+              </div>
+              <h3 class="step__title">Text is extracted instantly</h3>
+              <p class="step__description">
+                The on-device ML Kit model reads every word in your screenshot
+                in under a second — no internet, no waiting.
+              </p>
+            </div>
+            <div class="step__connector" aria-hidden="true"></div>
+          </li>
+
+          <li class="step">
+            <div class="step__number" aria-hidden="true">03</div>
+            <div class="step__content">
+              <div class="step__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+              </div>
+              <h3 class="step__title">Key information is detected</h3>
+              <p class="step__description">
+                SnapTask identifies dates, phone numbers, emails, links,
+                addresses, and prices — and highlights them with confidence
+                scoring.
+              </p>
+            </div>
+            <div class="step__connector" aria-hidden="true"></div>
+          </li>
+
+          <li class="step">
+            <div class="step__number" aria-hidden="true">04</div>
+            <div class="step__content">
+              <div class="step__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                  <polyline points="13 2 13 9 20 9"/>
+                  <path d="M20 14.66V20a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2h5.34"/>
+                  <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"/>
+                </svg>
+              </div>
+              <h3 class="step__title">Take action with one tap</h3>
+              <p class="step__description">
+                SnapTask ranks and presents the right action for each
+                detected item. Set a reminder, open a link, call a number,
+                or send an email — instantly.
+              </p>
+            </div>
+          </li>
+
+        </ol>
+
+      </div>
+    </section><!-- /how-it-works -->
+
+
+    <!-- ════════════════════════════════════════════════════════════════════
+         PRIVACY HIGHLIGHT
+    ════════════════════════════════════════════════════════════════════ -->
+    <section class="privacy-section section" id="privacy" aria-labelledby="privacy-heading">
+      <div class="container">
+
+        <div class="privacy-card">
+
+          <!-- Decorative background -->
+          <div class="privacy-card__bg" aria-hidden="true">
+            <div class="privacy-card__shape privacy-card__shape--1"></div>
+            <div class="privacy-card__shape privacy-card__shape--2"></div>
+          </div>
+
+          <!-- Content -->
+          <div class="privacy-card__content">
+
+            <div class="privacy-card__icon" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+
+            <h2 class="privacy-card__title" id="privacy-heading">
+              Everything happens<br>on your device.
+            </h2>
+
+            <p class="privacy-card__description">
+              SnapTask declares no INTERNET permission — meaning it is
+              architecturally incapable of transmitting your screenshots
+              or extracted data anywhere. Your information is yours alone.
+            </p>
+
+            <!-- Privacy stats -->
+            <ul class="privacy-stats" role="list" aria-label="Privacy guarantees">
+              <li class="privacy-stat">
+                <span class="privacy-stat__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                </span>
+                No cloud storage
+              </li>
+              <li class="privacy-stat">
+                <span class="privacy-stat__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                </span>
+                No tracking or analytics
+              </li>
+              <li class="privacy-stat">
+                <span class="privacy-stat__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                </span>
+                No advertising (v1.0)
+              </li>
+              <li class="privacy-stat">
+                <span class="privacy-stat__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                </span>
+                No account required
+              </li>
+              <li class="privacy-stat">
+                <span class="privacy-stat__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                </span>
+                No data sold or shared
+              </li>
+              <li class="privacy-stat">
+                <span class="privacy-stat__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                </span>
+                Full data deletion in-app
+              </li>
+            </ul>
+
+            <a href="privacy.html" class="btn btn--primary btn--lg privacy-card__cta">
+              Read Privacy Policy
+              <svg class="btn__icon btn__icon--right" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+
+          </div><!-- /privacy-card__content -->
+
+        </div><!-- /privacy-card -->
+
+      </div>
+    </section><!-- /privacy -->
+
+
+    <!-- ════════════════════════════════════════════════════════════════════
+         FAQ
+    ════════════════════════════════════════════════════════════════════ -->
+    <section class="faq section" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label">FAQ</span>
+          <h2 class="section-title" id="faq-heading">
+            Frequently asked questions.
+          </h2>
+          <p class="section-description">
+            Still have questions?
+            <a href="support.html" class="text-link">Visit the support page</a>
+            or email
+            <a href="mailto:saadelfadil18@gmail.com" class="text-link">saadelfadil18@gmail.com</a>.
+          </p>
+        </div>
+
+        <div class="faq__list" role="list">
+
+          <!-- 1 -->
+          <div class="faq-item" role="listitem">
+            <button
+              class="faq-item__question"
+              aria-expanded="false"
+              aria-controls="faq-1-answer"
+              id="faq-1-btn"
+            >
+              Does SnapTask upload my screenshots?
+              <span class="faq-item__chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </span>
+            </button>
+            <div
+              class="faq-item__answer"
+              id="faq-1-answer"
+              role="region"
+              aria-labelledby="faq-1-btn"
+              hidden
+            >
+              <p>
+                No. SnapTask version 1.0 declares no INTERNET permission in its
+                AndroidManifest, which means it is technically incapable of
+                transmitting any data over the network. Your screenshots never
+                leave your device.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="faq-item" role="listitem">
+            <button
+              class="faq-item__question"
+              aria-expanded="false"
+              aria-controls="faq-2-answer"
+              id="faq-2-btn"
+            >
+              Does SnapTask require an internet connection?
+              <span class="faq-item__chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </span>
+            </button>
+            <div
+              class="faq-item__answer"
+              id="faq-2-answer"
+              role="region"
+              aria-labelledby="faq-2-btn"
+              hidden
+            >
+              <p>
+                No. SnapTask works entirely offline. The ML Kit text recognition
+                model is bundled inside the app, so OCR works with no internet
+                connection. You can use it on a plane, in a tunnel, or anywhere
+                without signal.
+              </p>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="faq-item" role="listitem">
+            <button
+              class="faq-item__question"
+              aria-expanded="false"
+              aria-controls="faq-3-answer"
+              id="faq-3-btn"
+            >
+              How accurate is the text recognition?
+              <span class="faq-item__chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </span>
+            </button>
+            <div
+              class="faq-item__answer"
+              id="faq-3-answer"
+              role="region"
+              aria-labelledby="faq-3-btn"
+              hidden
+            >
+              <p>
+                SnapTask uses Google's ML Kit bundled Latin text recognition,
+                which handles printed text, screenshots of apps, and documents
+                very reliably. Results improve on high-contrast, high-resolution
+                screenshots. Detected entities can always be edited before you
+                confirm any action.
+              </p>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="faq-item" role="listitem">
+            <button
+              class="faq-item__question"
+              aria-expanded="false"
+              aria-controls="faq-4-answer"
+              id="faq-4-btn"
+            >
+              Can I delete my data?
+              <span class="faq-item__chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </span>
+            </button>
+            <div
+              class="faq-item__answer"
+              id="faq-4-answer"
+              role="region"
+              aria-labelledby="faq-4-btn"
+              hidden
+            >
+              <p>
+                Yes. Every screenshot, extracted text entry, and reminder lives
+                locally on your device. You can delete individual items from
+                within the app, or clear everything at once via Android's App
+                Settings → Storage → Clear Data. Uninstalling the app removes
+                all data completely.
+              </p>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="faq-item" role="listitem">
+            <button
+              class="faq-item__question"
+              aria-expanded="false"
+              aria-controls="faq-5-answer"
+              id="faq-5-btn"
+            >
+              What types of information can SnapTask detect?
+              <span class="faq-item__chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </span>
+            </button>
+            <div
+              class="faq-item__answer"
+              id="faq-5-answer"
+              role="region"
+              aria-labelledby="faq-5-btn"
+              hidden
+            >
+              <p>
+                In version 1.0, SnapTask automatically detects: dates and times,
+                phone numbers, email addresses, URLs and links, postal addresses,
+                and prices. All detection runs locally using deterministic
+                algorithms — no network calls.
+              </p>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="faq-item" role="listitem">
+            <button
+              class="faq-item__question"
+              aria-expanded="false"
+              aria-controls="faq-6-answer"
+              id="faq-6-btn"
+            >
+              Will SnapTask ever add advertising?
+              <span class="faq-item__chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </span>
+            </button>
+            <div
+              class="faq-item__answer"
+              id="faq-6-answer"
+              role="region"
+              aria-labelledby="faq-6-btn"
+              hidden
+            >
+              <p>
+                SnapTask version 1.0 contains no advertising of any kind. If
+                advertising is ever introduced in a future release, the Privacy
+                Policy will be updated and users will be notified in advance.
+                Monetization will never compromise your privacy.
+              </p>
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div class="faq-item" role="listitem">
+            <button
+              class="faq-item__question"
+              aria-expanded="false"
+              aria-controls="faq-7-answer"
+              id="faq-7-btn"
+            >
+              Which Android version does SnapTask support?
+              <span class="faq-item__chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </span>
+            </button>
+            <div
+              class="faq-item__answer"
+              id="faq-7-answer"
+              role="region"
+              aria-labelledby="faq-7-btn"
+              hidden
+            >
+              <p>
+                SnapTask requires Android 8.0 (API 26) or higher. It targets
+                the latest Android SDK for optimal security and compatibility
+                with modern Android features including exact alarm scheduling
+                and predictive back gestures.
+              </p>
+            </div>
+          </div>
+
+          <!-- 8 -->
+          <div class="faq-item" role="listitem">
+            <button
+              class="faq-item__question"
+              aria-expanded="false"
+              aria-controls="faq-8-answer"
+              id="faq-8-btn"
+            >
+              Does SnapTask need access to my contacts or camera?
+              <span class="faq-item__chevron" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </span>
+            </button>
+            <div
+              class="faq-item__answer"
+              id="faq-8-answer"
+              role="region"
+              aria-labelledby="faq-8-btn"
+              hidden
+            >
+              <p>
+                No. SnapTask only requests three permissions: notification
+                access (to deliver reminders you create), exact alarm scheduling
+                (for precise reminder timing), and boot-completed access (to
+                restore reminders after a reboot). No camera, no contacts,
+                no storage, no location.
+              </p>
+            </div>
+          </div>
+
+        </div><!-- /faq__list -->
+
+      </div>
+    </section><!-- /faq -->
+
+
+    <!-- ════════════════════════════════════════════════════════════════════
+         FINAL CTA
+    ════════════════════════════════════════════════════════════════════ -->
+    <section class="cta-section section" id="cta" aria-labelledby="cta-heading">
+      <div class="container">
+
+        <div class="cta-card">
+          <div class="cta-card__bg" aria-hidden="true">
+            <div class="cta-card__blob cta-card__blob--1"></div>
+            <div class="cta-card__blob cta-card__blob--2"></div>
+          </div>
+
+          <div class="cta-card__content">
+            <h2 class="cta-card__title" id="cta-heading">
+              Ready to turn screenshots<br>into actions?
+            </h2>
+            <p class="cta-card__description">
+              SnapTask is coming to Google Play. No account needed.
+              No cloud. Just productivity — on your terms.
+            </p>
+            <div class="cta-card__buttons">
+              <a
+                href="#download"
+                class="btn btn--white btn--lg"
+                aria-label="Available soon on Google Play"
+              >
+                <svg class="btn__icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M3.18 23.82a2 2 0 002.78.4l10.82-6.25-2.83-2.83L3.18 23.82zM22.62 10.4a2 2 0 000-3.46L19.3 5.07l-3.06 3.07 3.06 3.07 3.32-1.81zM2 .72A2 2 0 00.09 2.9v18.2A2 2 0 002 23.28L13.95 12 2 .72zm11.95.9L4.52 5.87l3.06 3.06 6.37-6.37-.22-.22a2 2 0 00-1.78.28z"/>
+                </svg>
+                Available Soon on Google Play
+              </a>
+              <a href="privacy.html" class="btn btn--ghost-white btn--lg">
+                Privacy Policy
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /cta -->
+
+  </main>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer__layout">
+
+        <!-- Brand column -->
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo" aria-label="SnapTask home">
+            <img src="assets/logo.svg" alt="SnapTask" width="110" height="28" loading="lazy" />
+          </a>
+          <p class="footer__tagline">
+            Turn screenshots into real actions.
+          </p>
+          <p class="footer__meta">
+            Version 1.0.0 · Android
+          </p>
+        </div>
+
+        <!-- Links columns -->
+        <nav class="footer__nav" aria-label="Footer navigation">
+
+          <div class="footer__nav-group">
+            <h3 class="footer__nav-heading">Product</h3>
+            <ul class="footer__nav-list" role="list">
+              <li><a href="#features"     class="footer__nav-link">Features</a></li>
+              <li><a href="#how-it-works" class="footer__nav-link">How It Works</a></li>
+              <li><a href="#faq"          class="footer__nav-link">FAQ</a></li>
+              <li><a href="#download"     class="footer__nav-link">Download</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__nav-group">
+            <h3 class="footer__nav-heading">Legal</h3>
+            <ul class="footer__nav-list" role="list">
+              <li><a href="privacy.html" class="footer__nav-link">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__nav-group">
+            <h3 class="footer__nav-heading">Support</h3>
+            <ul class="footer__nav-list" role="list">
+              <li><a href="support.html" class="footer__nav-link">Help Center</a></li>
+              <li>
+                <a href="mailto:saadelfadil18@gmail.com" class="footer__nav-link">
+                  saadelfadil18@gmail.com
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </nav>
+
+      </div><!-- /footer__layout -->
+
+      <!-- Footer bottom bar -->
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          &copy; 2026 SnapTask. Developed by
+          <a href="mailto:saadelfadil18@gmail.com" class="footer__nav-link">Saad El Fadil</a>.
+        </p>
+        <p class="footer__legal-note">
+          SnapTask is a privacy-first application.
+          <a href="privacy.html" class="footer__nav-link">Read our Privacy Policy</a>.
+        </p>
+      </div>
+
+    </div>
+  </footer><!-- /site-footer -->
+
+
+  <!-- ── Script ─────────────────────────────────────────────────────────── -->
+  <script src="script.js"></script>
+
+</body>
+</html>
