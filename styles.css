@@ -1341,7 +1341,7 @@ strong {
 
 /* Invert the logo SVG so it shows white on the dark footer */
 .footer__logo img {
-  height: 36px;
+  height: 150px;
   width: auto;
   display: block;
 }
