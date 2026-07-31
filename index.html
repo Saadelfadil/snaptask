@@ -9,25 +9,25 @@
 
   <!-- ── SEO ───────────────────────────────────────────────────────────── -->
   <title>SnapTask — Turn Screenshots into Real Actions</title>
-  <meta name="description" content="SnapTask is a privacy-first Android app that turns your screenshots into actions. On-device OCR, smart entity detection, zero cloud. No account required." />
-  <meta name="keywords" content="SnapTask, screenshot to action, on-device OCR, Android productivity, privacy-first, offline, reminder from screenshot, ML Kit" />
+  <meta name="description" content="SnapTask is an Android app that turns your screenshots into actions using on-device OCR. Local-first processing, no account required, smart reminders." />
+  <meta name="keywords" content="SnapTask, screenshot to action, on-device OCR, Android productivity, local-first, offline OCR, reminder from screenshot, ML Kit" />
   <meta name="author" content="Saad El Fadil" />
-  <link rel="canonical" href="https://saadelfadil.github.io/snaptask/" />
+  <link rel="canonical" href="https://snaptask.site/" />
 
   <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
   <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://saadelfadil.github.io/snaptask/" />
+  <meta property="og:url"         content="https://snaptask.site/" />
   <meta property="og:title"       content="SnapTask — Turn Screenshots into Real Actions" />
-  <meta property="og:description" content="Share a screenshot. SnapTask reads it, detects what matters, and suggests the right action — entirely on your device." />
-  <meta property="og:image"       content="assets/hero-image.png" />
+  <meta property="og:description" content="Share a screenshot. SnapTask reads it, detects what matters, and suggests the right action — with on-device OCR." />
+  <meta property="og:image"       content="https://snaptask.site/assets/hero-image.png" />
   <meta property="og:site_name"   content="SnapTask" />
   <meta property="og:locale"      content="en_US" />
 
   <!-- ── Twitter Card ──────────────────────────────────────────────────── -->
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="SnapTask — Turn Screenshots into Real Actions" />
-  <meta name="twitter:description" content="Share a screenshot. SnapTask reads it, detects what matters, and suggests the right action — entirely on your device." />
-  <meta name="twitter:image"       content="assets/hero-image.png" />
+  <meta name="twitter:description" content="Share a screenshot. SnapTask reads it, detects what matters, and suggests the right action — with on-device OCR." />
+  <meta name="twitter:image"       content="https://snaptask.site/assets/hero-image.png" />
 
   <!-- ── Favicon ───────────────────────────────────────────────────────── -->
   <link rel="icon"             type="image/png" href="assets/favicon.png" />
@@ -54,12 +54,12 @@
     "name": "SnapTask",
     "operatingSystem": "Android",
     "applicationCategory": "ProductivityApplication",
-    "description": "Turn screenshots into real actions using on-device OCR. Privacy-first, offline, no account required.",
-    "url": "https://saadelfadil.github.io/snaptask/",
+    "description": "Turn screenshots into real actions using on-device OCR. Local-first, no account required.",
+    "url": "https://snaptask.site/",
     "author": {
       "@type": "Person",
       "name": "Saad El Fadil",
-      "email": "saadelfadil18@gmail.com"
+      "email": "contact@snaptask.site"
     },
     "offers": {
       "@type": "Offer",
@@ -220,10 +220,10 @@
               </div>
               <div class="trust-item" role="listitem">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <line x1="1" y1="1" x2="23" y2="23"/>
-                  <path d="M16.72 11.06A10.94 10.94 0 0119 12.55M5 5a10.94 10.94 0 0113.22 5M10.71 5.05A16 16 0 0122.56 9M1.42 9a15.91 15.91 0 014.7-2.88M8.53 16.11a6 6 0 006.95 0M12 20h.01"/>
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <path d="M3 9h18M9 21V9"/>
                 </svg>
-                No internet required
+                Data stays on your device
               </div>
             </div>
 
@@ -314,10 +314,11 @@
                 <path d="M16.72 11.06A10.94 10.94 0 0119 12.55M5 5a10.94 10.94 0 0113.22 5M10.71 5.05A16 16 0 0122.56 9M1.42 9a15.91 15.91 0 014.7-2.88M8.53 16.11a6 6 0 006.95 0M12 20h.01"/>
               </svg>
             </div>
-            <h3 class="feature-card__title">Fully Offline</h3>
+            <h3 class="feature-card__title">Fully Offline OCR</h3>
             <p class="feature-card__description">
-              SnapTask requires no internet connection. The app declares no
-              INTERNET permission — it is technically incapable of sending your data anywhere.
+              Screenshot reading, entity detection, and reminders all work
+              without a signal. The app's OCR pipeline makes no network calls —
+              your screenshots and extracted text are never sent anywhere.
             </p>
           </article>
 
@@ -344,10 +345,10 @@
                 <path d="M9 12l2 2 4-4"/>
               </svg>
             </div>
-            <h3 class="feature-card__title">Privacy-First</h3>
+            <h3 class="feature-card__title">Local-First</h3>
             <p class="feature-card__description">
-              No account. No tracking. No analytics. No ads. Your screenshots
-              stay on your device — period.
+              No account. No analytics or tracking SDKs. Your screenshots,
+              extracted text, and reminders stay on your device.
             </p>
           </article>
 
@@ -501,24 +502,25 @@
             </div>
 
             <h2 class="privacy-card__title" id="privacy-heading">
-              Everything happens<br>on your device.
+              Your screenshots<br>stay on your device.
             </h2>
 
             <p class="privacy-card__description">
-              SnapTask declares no INTERNET permission — meaning it is
-              architecturally incapable of transmitting your screenshots
-              or extracted data anywhere. Your information is yours alone.
+              OCR, entity detection, and reminders run entirely on-device — your
+              screenshots and extracted text are never uploaded to our servers.
+              SnapTask shows a small banner ad, served by Google AdMob, to
+              support development; see the Privacy Policy for details.
             </p>
 
             <!-- Privacy stats -->
-            <ul class="privacy-stats" role="list" aria-label="Privacy guarantees">
+            <ul class="privacy-stats" role="list" aria-label="Privacy highlights">
               <li class="privacy-stat">
                 <span class="privacy-stat__icon" aria-hidden="true">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <polyline points="20 6 9 17 4 12"/>
                   </svg>
                 </span>
-                No cloud storage
+                No cloud storage of your content
               </li>
               <li class="privacy-stat">
                 <span class="privacy-stat__icon" aria-hidden="true">
@@ -526,7 +528,7 @@
                     <polyline points="20 6 9 17 4 12"/>
                   </svg>
                 </span>
-                No tracking or analytics
+                No analytics or tracking SDKs
               </li>
               <li class="privacy-stat">
                 <span class="privacy-stat__icon" aria-hidden="true">
@@ -534,7 +536,7 @@
                     <polyline points="20 6 9 17 4 12"/>
                   </svg>
                 </span>
-                No advertising (v1.0)
+                Banner ads only, via Google AdMob
               </li>
               <li class="privacy-stat">
                 <span class="privacy-stat__icon" aria-hidden="true">
@@ -550,7 +552,7 @@
                     <polyline points="20 6 9 17 4 12"/>
                   </svg>
                 </span>
-                No data sold or shared
+                Your content is never sold
               </li>
               <li class="privacy-stat">
                 <span class="privacy-stat__icon" aria-hidden="true">
@@ -592,7 +594,7 @@
             Still have questions?
             <a href="support.html" class="text-link">Visit the support page</a>
             or email
-            <a href="mailto:saadelfadil18@gmail.com" class="text-link">saadelfadil18@gmail.com</a>.
+            <a href="mailto:hello@snaptask.site" class="text-link">hello@snaptask.site</a>.
           </p>
         </div>
 
@@ -621,10 +623,12 @@
               hidden
             >
               <p>
-                No. SnapTask version 1.0 declares no INTERNET permission in its
-                AndroidManifest, which means it is technically incapable of
-                transmitting any data over the network. Your screenshots never
-                leave your device.
+                No. SnapTask's OCR pipeline processes your screenshots entirely
+                on-device and never uploads them to our servers. The app does
+                use the internet to display a banner ad through Google AdMob,
+                but that connection is separate from — and never touches —
+                your screenshots, extracted text, or reminders. See the
+                <a href="privacy.html" class="text-link">Privacy Policy</a> for details.
               </p>
             </div>
           </div>
@@ -652,10 +656,12 @@
               hidden
             >
               <p>
-                No. SnapTask works entirely offline. The ML Kit text recognition
-                model is bundled inside the app, so OCR works with no internet
-                connection. You can use it on a plane, in a tunnel, or anywhere
-                without signal.
+                No, not for the core features. The ML Kit text recognition
+                model is bundled inside the app, so screenshot reading, entity
+                detection, and reminders all work with no internet connection —
+                on a plane, in a tunnel, or anywhere without signal. The app's
+                banner ad requires a connection to load; if you're offline, the
+                app simply shows no ad and everything else keeps working.
               </p>
             </div>
           </div>
@@ -763,7 +769,7 @@
               aria-controls="faq-6-answer"
               id="faq-6-btn"
             >
-              Will SnapTask ever add advertising?
+              Does SnapTask show ads?
               <span class="faq-item__chevron" aria-hidden="true">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <polyline points="6 9 12 15 18 9"/>
@@ -778,10 +784,14 @@
               hidden
             >
               <p>
-                SnapTask version 1.0 contains no advertising of any kind. If
-                advertising is ever introduced in a future release, the Privacy
-                Policy will be updated and users will be notified in advance.
-                Monetization will never compromise your privacy.
+                Yes — SnapTask shows a small banner ad, served by Google
+                AdMob, to support development. There are no interstitial,
+                rewarded, native, or app-open ads. Where required by law
+                (such as in the EEA, UK, or applicable US states), SnapTask
+                asks for your consent via Google's User Messaging Platform
+                before requesting a personalized ad. See the
+                <a href="privacy.html" class="text-link">Privacy Policy</a>
+                for details.
               </p>
             </div>
           </div>
@@ -840,11 +850,14 @@
               hidden
             >
               <p>
-                No. SnapTask only requests three permissions: notification
-                access (to deliver reminders you create), exact alarm scheduling
-                (for precise reminder timing), and boot-completed access (to
-                restore reminders after a reboot). No camera, no contacts,
-                no storage, no location.
+                No camera, no contacts, no storage, no location. SnapTask
+                requests notification access (to deliver reminders you create),
+                exact alarm scheduling (for precise reminder timing), and
+                boot-completed access (to restore reminders after a reboot).
+                It also declares internet access, used solely by the Google
+                AdMob SDK to display the banner ad — not by OCR, screenshots,
+                or reminders. See the full breakdown on the
+                <a href="support.html#app-permissions" class="text-link">Support page</a>.
               </p>
             </div>
           </div>
@@ -945,8 +958,8 @@
             <ul class="footer__nav-list" role="list">
               <li><a href="support.html" class="footer__nav-link">Help Center</a></li>
               <li>
-                <a href="mailto:saadelfadil18@gmail.com" class="footer__nav-link">
-                  saadelfadil18@gmail.com
+                <a href="mailto:contact@snaptask.site" class="footer__nav-link">
+                  contact@snaptask.site
                 </a>
               </li>
             </ul>
@@ -960,10 +973,10 @@
       <div class="footer__bottom">
         <p class="footer__copyright">
           &copy; 2026 SnapTask. Developed by
-          <a href="mailto:saadelfadil18@gmail.com" class="footer__nav-link">Saad El Fadil</a>.
+          <a href="mailto:contact@snaptask.site" class="footer__nav-link">Saad El Fadil</a>.
         </p>
         <p class="footer__legal-note">
-          SnapTask is a privacy-first application.
+          SnapTask is a local-first application.
           <a href="privacy.html" class="footer__nav-link">Read our Privacy Policy</a>.
         </p>
       </div>

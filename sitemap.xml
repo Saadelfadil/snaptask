@@ -3,24 +3,24 @@
 
   <!-- Landing page -->
   <url>
-    <loc>https://saadelfadil.github.io/snaptask/</loc>
-    <lastmod>2026-07-26</lastmod>
+    <loc>https://snaptask.site/</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Privacy Policy -->
   <url>
-    <loc>https://saadelfadil.github.io/snaptask/privacy.html</loc>
-    <lastmod>2026-07-26</lastmod>
+    <loc>https://snaptask.site/privacy.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Support -->
   <url>
-    <loc>https://saadelfadil.github.io/snaptask/support.html</loc>
-    <lastmod>2026-07-26</lastmod>
+    <loc>https://snaptask.site/support.html</loc>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
